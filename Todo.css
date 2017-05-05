@@ -1,0 +1,396 @@
+body {
+    font-family: roboto;
+
+    background: #FDFC47;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #000000, #ffffff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #000000, #ffffff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+select {
+    margin-left: 1%;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-position: right 50%;
+    background-repeat: no-repeat;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAMCAYAAABSgIzaAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NDZFNDEwNjlGNzFEMTFFMkJEQ0VDRTM1N0RCMzMyMkIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NDZFNDEwNkFGNzFEMTFFMkJEQ0VDRTM1N0RCMzMyMkIiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo0NkU0MTA2N0Y3MUQxMUUyQkRDRUNFMzU3REIzMzIyQiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo0NkU0MTA2OEY3MUQxMUUyQkRDRUNFMzU3REIzMzIyQiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PuGsgwQAAAA5SURBVHjaYvz//z8DOYCJgUxAf42MQIzTk0D/M+KzkRGPoQSdykiKJrBGpOhgJFYTWNEIiEeAAAMAzNENEOH+do8AAAAASUVORK5CYII=);
+}
+
+input:focus, select:focus {
+    outline: none;
+}
+
+.fa:hover {
+    cursor: pointer;
+}
+
+.form {
+    background-color: white;
+    display: none;
+    font-size: 17px;
+    border-top: 1px solid black;
+    height: 0;
+    line-height: 0;
+}
+
+.form * {
+    height: 100%;
+    float: left;
+    text-align: center;
+    border: 0;
+    border-left: 1px solid black;
+}
+
+.categoryselect {
+    width: 30%;
+    background-color: white;
+    border-bottom: 1px solid black;
+    border: 0;
+}
+
+.date {
+    width: 8%;
+}
+
+.cal {
+    width: 8%;
+    font-size: 2em;
+}
+
+.category {
+    font-weight: bold;
+    padding-right: 2%;
+    height: 45px;
+    line-height: 43px;
+}
+
+.categoryname {
+    font-size: 20px;
+    padding-left: 2%;
+    float: left;
+}
+
+.numtodos {
+    float: right;
+    font-size: 20px;
+}
+
+.todo {
+    padding-right: 2%;
+    height: 45px;
+    line-height: 43px;
+}
+
+.todoname {
+    font-size: 20px;
+    padding-left: 7%;
+    float: left;
+}
+
+.tododate {
+    font-size: 20px;
+    float: right;
+}
+
+.edit {
+    background-color: #ffe000;
+}
+
+.delete {
+    background-color: #e74c3c;
+}
+
+.done {
+    background-color: #69f0ae;
+}
+
+.collapsable {
+    margin-right: 1%;
+    color: white;
+    background-color: #03a9f4;
+}
+
+.sidebutton {
+    height: 100%;
+    float: left;
+    text-align: center;
+    font-size: 1.5em;
+    overflow: hidden;
+    width: 0;
+    -webkit-transition: .2s linear;
+    -moz-transition: .2s linear;
+    transition: .2s linear;
+}
+
+.sidebutton:hover {
+    cursor: pointer;
+}
+
+.sidebutton .glyphicon {
+    margin: auto;
+}
+
+.completed .todoname, .completed .tododate {
+    color: grey;
+}
+
+.completed .todoname {
+    text-decoration: line-through;
+}
+
+.bigbutton {
+    width: 25%;
+    height: 50%;
+    font-weight: bold;
+    border: 0;
+    border-top: 1px solid black;
+}
+
+.editformbody {
+    width: 100%;
+    height: 50%;
+    max-height: 50px;
+    border-left: 0;
+    border-bottom: 1px solid black;
+}
+
+.fa-pencil-square-o {
+    margin-top: 7%;
+    margin-right: 15%;
+    float: right;
+}
+
+.fa-calendar {
+    margin: 0 auto;
+    border: 0;
+    float: none;
+}
+
+.fa-trash {
+    color: white;
+}
+
+.fa-pencil {
+    color: white;
+}
+
+.fa-check {
+    color: white;
+}
+
+#edittodo, #edcat {
+    border-bottom: 1px solid black;
+    overflow: hidden;
+}
+
+#edcatname {
+    border: 0;
+    width: 100%;
+    text-align: left;
+    padding-left: 1%;
+}
+
+#container {
+    width: 55%;
+    margin: 50px auto;
+    box-shadow: 5px 5px 10px #333333;
+}
+
+#header {
+    width: 100%;
+    height: 50px;
+    color: white;
+    background-color: #00e676;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+#logo {
+    font-weight: bold;
+    float: left;
+    padding-left: 2%
+}
+
+#logo p {
+    height: 100%;
+    font-size: 1.7em;
+}
+
+#newnote {
+    margin-top: 10px;
+    font-size: 2em;
+    float: right;
+}
+
+#newtodoname, #edittodoname {
+    width: 42%;
+    border: 0;
+    border-right: 1px solid black;
+    text-align: left;
+    padding-left: 1%;
+}
+
+#newcategoryname {
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid black;
+    text-align: left;
+    padding-left: 1%;
+}
+
+#slash {
+    width: 3%;
+    margin: 0;
+}
+
+#todos {
+    overflow: hidden;
+    background-color: white;
+    clear: both;
+}
+
+#slash, .day {
+    border-left: 0px;
+}
+
+#cancel, #cancel2 {
+    height: 45px;
+    width: 20%;
+    line-height: 25px;
+    float: left;
+    margin-left: 8%;
+    margin-top: 20px;
+    background-color: white;
+    border: 2px solid black;
+}
+
+#cancel2 {
+    line-height: 42px;
+}
+
+#apply, #apply2 {
+    height: 45px;
+    width: 20%;
+    line-height: 25px;
+    float: right;
+    margin-right: 8%;
+    margin-top: 20px;
+    color: white;
+    background: #2288ff;
+    border: 2px solid #2288ff;
+}
+
+#apply2 {
+    line-height: 42px;
+}
+
+#header .glyphicon {
+    font-size: 2.5em;
+    margin: 5px;
+}
+
+
+
+/* Start Modal Code */
+
+#settingsbutton {
+    font-size: 2em;
+    margin-right: 2%;
+    margin-top: 2%;
+    float: right;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    text-align: center;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    border-radius: 0;
+    margin: 9% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 35%; /* Could be more or less, depending on screen size */
+}
+
+.setting {
+    font-size: 1.3em;
+    color: black;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: -5px;
+    margin-bottom: 22px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Other Buttons */
+#changecolors {
+    border-radius: 0px;
+    padding-left: 2%;
+    height: 40px;
+    width: 50%;
+    margin: 0;
+}
+
+#color1, #color2 {
+    display: inline-block;
+}
+
+#color1 {
+    margin-right: 20px;
+}
+
+#color1 button, #color2 button {
+    margin-top: 10px;
+}
+
+.colorInput {
+    margin: 10px auto 0;
+}
+
+#applycolorchange {
+    height: 35px;
+    width: 40%;
+    line-height: 25px;
+    margin-top: 10px;
+    color: white;
+    background: #2288ff;
+    border: 2px solid #2288ff;
+
+}
+
+/* End Modal Code */
+
+#error {
+    display: none;
+    background: rgba(255, 150, 150, 1);
+    color: white;
+    text-align: center;
+    margin: 0 30%;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: normal;
+    border: 2px solid rgba(255, 0, 0, 1);
+    border-radius: 5px;
+}

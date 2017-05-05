@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BCA Todo List</title>
+    <script src="lib/jquery-3.2.1.min.js"></script>
+    <script src="lib/jquery-ui.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel = "stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="todo.css">
+    <link rel = "stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+</head>
+<body>
+    <!-- Start Modal Code -->
+    <div title=Settings id=settingsbutton><i class="fa fa-cogs" aria-hidden="true"></i></div>
+    <div style="clear: both;"></div>
+
+    <div id=myModal class=modal>
+
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p class=setting>Change Color Scheme</p>
+            <select id=changecolors>
+                <option id=Custom>Custom</option>
+                <option value="#d50000" id=Red>Red</option>
+                <option value="#ff9100" id=Orange>Orange</option>
+                <option value="#fdd835" id=Yellow>Yellow</option>
+                <option value="#00e676" id=Green>Green</option>
+                <option value="#1565c0" id=Blue>Blue</option>
+                <option value="#6a1b9a" id=Purple>Purple</option>
+                <option value="#ff4081" id=Pink>Pink</option>
+            </select>
+            <br>
+            <div id=color1>
+            <p>Color 1</p>
+            <div class=colorInput><input id=leftColorInput type="color"></div>
+            <button id=swap>Swap</button>
+            </div>
+            <div id=color2>
+            <p>Color 2</p>
+            <div class=colorInput><input id=rightColorInput type="color"></div>
+            <button id=same>Same</button>
+            </div>
+            <br>
+            <button id=applycolorchange>Apply</button>
+        </div>
+
+    </div>
+
+    <!-- End Modal Code -->
+
+    <div>
+        <h1 id="error"><span id="error-message">Error!  Please enter a todo or category.</span></h1>
+    </div>
+
+    <div id=container>
+        <div id=header>
+            <div id=logo><p>Todo List</p></div>
+            <div title='New Todo' id=newnote><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i></div>
+        </div>
+
+        <div class=form id=newtodo>
+
+            <input id=newtodoname type="text" placeholder="New Todo">
+
+            <select class=categoryselect id=catsel1></select>
+
+            <input class="date new month" type="text" placeholder="M">
+            <p id=slash>/</p>
+            <input class="date new day" type="text" placeholder="D">
+            <input type=text style="display: none;" class="datepicker" id="datepicker1">
+            <div class=cal><i class="fa fa-calendar" aria-hidden="true"></i></div>
+
+        </div>
+
+        <div class=form id=cat>
+
+            <input id=newcategoryname type="text" placeholder="New Category">
+
+        </div>
+
+        <div class=form id=edittodo>
+
+            <div class=editformbody>
+                <input type="text" placeholder="Todo Name" id=edittodoname>
+
+                <select class=categoryselect id=catsel2></select>
+
+                <input class="date ed month" type="text" placeholder="M">
+                <p id=slash>/</p>
+                <input class="date ed day" type="text" placeholder="D">
+
+                <input type=text style="display: none;" class="datepicker" id="datepicker2">
+                <div class=cal><i class="fa fa-calendar" aria-hidden="true"></i></div>
+            </div>
+
+            <button class=bigbutton id=cancel>Cancel</button>
+            <button class=bigbutton id=apply>Apply</button>
+
+        </div>
+
+        <div class=form id=edcat>
+            <div class=editformbody>
+                <input type="text" placeholder="Category Name" id=edcatname>
+            </div>
+            <br>
+            <div class=bigbutton id=cancel2>Cancel</div>
+            <div class=bigbutton id=apply2>Apply</div>
+        </div>
+
+        <div id=todos></div>
+
+    </div>
+
+
+    <script type="text/javascript" src="todo.js"></script>
+
+</body>
+</html>
